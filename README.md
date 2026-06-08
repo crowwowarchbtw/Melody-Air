@@ -1,8 +1,7 @@
 # Melody Air
 
 <p align="center">
-  <img  alt="image" src="https://github.com/user-attachments/assets/1cda7e47-3da7-4db8-bcef-ec91af502ea0" />
-" width="150" alt="Melody Air Logo">
+  <img src="https://github.com/user-attachments/assets/1cda7e47-3da7-4db8-bcef-ec91af502ea0" width="150" alt="Melody Air Logo">
 </p>
 
 > **Main Project:** This is a streamlined edition of our primary framework, [MelodyGX](https://github.com/crowwowarchbtw/MelodyGX), specifically adapted for the Opera One (Air) desktop core.
