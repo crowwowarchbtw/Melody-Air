@@ -1,39 +1,44 @@
 # Melody Air
 
-Melody Air is a deeply hardened, telemetry-free, and standalone portable distribution framework built on top of the Opera One (Air) desktop core. It is engineered to permanently eliminate corporate spyware, tracking modules, and forced update loops that cause background performance degradation during high-intensity gaming sessions.
+<p align="center">
+  <img  alt="image" src="https://github.com/user-attachments/assets/1cda7e47-3da7-4db8-bcef-ec91af502ea0" />
+" width="150" alt="Melody Air Logo">
+</p>
 
-## The Core Mission: Pure Performance
+> **Main Project:** This is a streamlined edition of our primary framework, [MelodyGX](https://github.com/crowwowarchbtw/MelodyGX), specifically adapted for the Opera One (Air) desktop core.
 
-Standard browser distributions actively utilize background loops to profile users, index behavior, and force silent updates. Melody Air disrupts this mechanism, shifting control back to the user by deploying an aggressive system-purging script that strips the engine down to its essential binary elements.
+Melody Air is a practical, portable deployment script built on top of the Opera One (Air) desktop engine. We are not trying to be heroes or reinvent the wheel here—this framework simply strips out the user tracking, proprietary telemetry, and forced background update loops that shouldn't have been running on your machine in the first place.
 
-### Key Architectural Overhauls
+## What It Actually Does
 
-* **Spyware & Telemetry Eradication**
-  The deployment script recursively scans the installation directory and completely obliterates integrated analytical daemons and reporting components (`opera_crashreporter.exe` and related telemetry hooks). No silent data packets, no background tracking sockets.
-* **Forced Update Interdiction (Broken Updates)**
-  Background updates are completely blocked by purging the native update infrastructure (`opera_autoupdate.exe` and `opera_autoupdate.gup`). This guarantees that your browser environment remains locked at the deployment version, eliminating sudden CPU spikes and unwanted automated patches.
+Standard browser builds constantly run background tasks to profile your behavior, log analytics, and push silent updates that disrupt system performance. Melody Air removes this fluff, giving you a clean, isolated standalone browser that leaves your system resources alone.
+
+### Core Enhancements
+
+* **Telemetry Stripping**
+  The script locates and permanently purges integrated analytical daemons and crash reporters (`opera_crashreporter.exe` and tracking hooks). No automated data packets, no background metrics collection.
+* **Forced Update Interdiction**
+  Background update cycles are completely blocked by deleting the update binaries (`opera_autoupdate.exe` and `opera_autoupdate.gup`). Your browser version remains locked exactly where you deployed it, preventing sudden CPU spikes and forced changes.
 * **True Portable Confinement**
-  By hardcoding internal runtime configuration arrays (`sidekick.config`) and applying the `/standalone` environment vector, the browser is entirely sandboxed inside `C:\MelodyAir`. It leaves zero residue data in the host machine's `%APPDATA%`, `%LOCALAPPDATA%`, or Windows Registry strings.
-* **First-Run Welcome Suppression**
-  The framework injects automated static verification markers (`First Run`) across the directory matrix. This deceives the internal Chromium wizard, completely blinding the browser's introductory setup sequence. Users bypass promotional splash screens, mandatory account creation prompts, and aggressive cookie-consent walls on startup.
-* **Local DPAPI Cryptographic Alignment**
-  To prevent the profile resets triggered by Chromium's hardware-bound HMAC encryption (Windows DPAPI), version 0.1 allows the browser engine to natively sign a fresh local database. You get a perfectly stable foundation that allows you to configure everything manually from scratch without facing silent corruption resets.
+  By utilizing `sidekick.config` and the native `/standalone` flag, the entire runtime environment is locked inside `C:\MelodyAir`. It doesn't write data to the host registry or leak temporary cache files into `%APPDATA%` or `%LOCALAPPDATA%`.
+* **First-Run Suppression**
+  The script injects automated `First Run` marker files directly into the data matrix. This fools the browser into thinking it has already been launched before, completely bypassing welcome wizards, promo screens, and tracking cookie prompts on startup.
+* **Native Profile Generation**
+  Instead of fighting Chromium's machine-bound HMAC encryption (Windows DPAPI) with pre-configured profile clones, version 0.1 lets the engine natively sign a clean local profile on the target system. You get a stable, uncorrupted foundation to configure your personal preferences from scratch.
 
 ## Installation and Deployment
 
-1. Download the latest release package as a `.zip` archive.
-2. **Extract the archive** completely into any regular directory on your system (do not run files from within the compressed folder).
-3. Execute **`install.bat`** (the script automatically applies `-ExecutionPolicy Bypass` to temporarily suspend restrictive host Windows execution arrays).
-4. Once deployment stabilizes, launch the browser exclusively via the master launcher: `C:\MelodyAir\launcher.exe`.
+1. Download the repository as a `.zip` archive.
+2. **Extract the archive** completely to a local folder (do not execute scripts inside the compressed ZIP folder).
+3. Run **`install.bat`** (the batch file automatically bypasses Windows execution restrictions via `-ExecutionPolicy Bypass`).
+4. Always launch the browser using the master binary at `C:\MelodyAir\launcher.exe`.
 
 ## Technical Specifications
 
 * **Base Core:** Opera Desktop Core (One/Air Engine)
 * **Target Directory:** `C:\MelodyAir`
-* **Network Sockets:** Hardened (Inbound analytics blocked)
-* **Process Priority Hooks:** Isolated
+* **Primary Objective:** Telemetry removal and environment isolation
 
 ## License
 
-Distributed under the Apache License 2.0. See `LICENSE` for more information. Developed by crowwowarchbtw.
-<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/029e8bfd-52d6-467a-b757-aae5d9cca7ab" />
+Distributed under the Apache License 2.0. Developed by crowwowarchbtw.
