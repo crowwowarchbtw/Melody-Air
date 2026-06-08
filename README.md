@@ -1,8 +1,5 @@
 # Melody Air
 
-<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/029e8bfd-52d6-467a-b757-aae5d9cca7ab" />
-
-
 Melody Air is a deeply hardened, telemetry-free, and standalone portable distribution framework built on top of the Opera One (Air) desktop core. It is engineered to permanently eliminate corporate spyware, tracking modules, and forced update loops that cause background performance degradation during high-intensity gaming sessions.
 
 ## The Core Mission: Pure Performance
@@ -39,3 +36,4 @@ Standard browser distributions actively utilize background loops to profile user
 ## License
 
 Distributed under the Apache License 2.0. See `LICENSE` for more information. Developed by crowwowarchbtw.
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/029e8bfd-52d6-467a-b757-aae5d9cca7ab" />
